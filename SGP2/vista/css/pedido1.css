@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+a{cursor:pointer;
+color:#3b5998;
+-moz-outline-style:none;
+text-decoration:none}
+a:hover{text-decoration:underline;}
+div.ui-datepicker{
+ font-size:10px;
+}
+#letra{
+	position:absolute;
+	left:634px;
+	top: -1px;
+	width: 162px;
+	height: 60px;
+}
+ #carro{
+	position:absolute;
+	left: 129px;
+	top: 10px;
+	height: 29px;
+	width: 42px;
+}
+img{border:0}
+.tab_container{
+	border: 1px solid #999;
+	border-top: none;
+	overflow: hidden;
+	clear: both;
+	float: left;
+	width: 995px;
+	background: #fff;
+	position:absolute;
+	left: 0px;
+	top: 41px;
+	height:600px;
+	-moz-border-radius:0px 0px 7px 7px;
+	-webkit-border-radius:0px 0px 7px 7px;
+
+}
+#controles{
+	position:static;
+}
+
+thead {
+ color: #15428B;
+  border: 1px solid #4297d7;
+background: url(../img/bar.png)50% 50% repeat-x;
+}
+.null{
+border-bottom: 0px solid #666;
+border-right: 0px hidden;
+		text-align: center;
+	color:#333;
+  padding: 0.4em;
+	vertical-align: 4px; 
+}
+#bodyon, th, td {
+	border-bottom: 0px solid #666;
+
+border-right: 1px solid #ccc;
+	
+	text-align: left;
+	
+  padding: 0.4em;
+	vertical-align: 2px;    
+}
+
+#tbodyon  td {
+	background-color:#FFF;
+	color:#333;
+}
+
+
+#tbodyon, tr:hover td{
+	background-color:#D0E3EF;
+}
+#div_listar{
+	position:absolute;
+}
+
+tf{
+	background: url(../img/bar.png)50% 50% repeat-x;
+	color: #15428B;
+	text-align: center;
+}
+#bg{
+ background:url(../img/bar.png)50% 50%  repeat-x;
+ color: #15428B;
+}
+#mostrar{
+	position:absolute;
+	left: 1px;
+	top: 522px;
+	width: 1000px;
+	height: 62px;
+}
+        .cel{
+	border-bottom: 0px solid #666;
+border-right: 0px hidden;
+}

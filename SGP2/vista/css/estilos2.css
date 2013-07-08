@@ -1,0 +1,161 @@
+@charset "utf-8";
+/* CSS Document */
+
+a {
+	text-decoration:none;
+}
+
+root { 
+    display: block;
+}
+
+#logo14{
+	position:absolute;
+	width: 247px;
+	height: 69px;
+	left: 0px;
+	top: 1px;
+}
+#exit{
+	position:absolute;
+	left: 939px;
+	width: 29px;
+	top: 35px;
+	height: 25px;
+}
+body {
+	
+	background-color:#333;
+	
+}
+#logo7{
+	position:absolute;
+	width: 295px;
+	height: 181px;
+	left: 3px;
+	top: 3px;
+}
+.principal {
+	position: absolute;
+	border: 0px solid;
+	left: 0px;
+	top: 1px;
+	width: 920px;
+	height: 77px;
+	background-color:#06F;
+	-moz-border-radius: 7px;
+	-webkit-border-radius:7px;
+	border:2px groove;
+
+}
+.banner{
+	font-family: Calibri, sans-serif, serif;
+	font-weight: bold;
+	text-align: center;
+	font-size: 25px;
+	background-color:#333;
+	color: #ffffff;
+	width: 999px;
+	margin: auto;
+	position:absolute;
+	left: 3px;
+	top: 4px;
+	height: 73px;
+	border: 1px solid;
+	-moz-border-radius: 7px;
+	-webkit-border-radius:7px;
+}
+
+
+#lado1{
+	position: absolute;
+	left: -2px;
+	top:-2px;
+	border: 0px solid;
+	width:220px;
+	height: 718px;
+	background-color:#333;
+}
+#lado2{
+	position: absolute;
+	left: 1146px;
+	top:0px;
+	border: 0px solid;
+	width:208px;
+	height: 718px;
+	background-color:#333;
+}
+
+#letr{
+	position:absolute;
+	border: 2px groove #06f;
+	-moz-border-radius: 7px;
+	-webkit-border-radius:7px;
+	left: 349px;
+	top: 202px;
+	height: 182px;
+	width: 293px;
+}
+#content{
+	position:static;
+	width: 870px;
+	height: 27px;
+	left: 12px;
+	margin:20px;
+	top: 100px;
+}
+#content_wrapper{
+	width:992px;
+	height:825px;
+	background-color:#ccc;
+	margin:0px;
+	padding:6px;
+	overflow:hidden;
+	position:absolute;
+	left: 0px;
+	top: 28px;
+	
+	
+}
+#header{
+	position:absolute;
+	left: 685px;
+	top: 23px;
+	width: 257px;
+	height: 30px;
+
+}
+.contenedor{
+	position:absolute;
+	left: 2px;
+	top: 83px;
+	width: 1004px;
+	height: 523px;
+}
+
+	
+
+#marco{
+	position:absolute;
+	left: 800px;
+	top: 41px;
+	width: 550px;
+	height: 550px;
+	color: #00F;
+	border: 1px solid;}
+
+
+#nav{position:absolute;
+height:600px;
+background-color:#333;}
+.pie-pagina{
+	position: absolute;
+	border: 0px solid;
+	left: 2px;
+	top: 949px;
+	width: 920px;
+	height: 51px;
+	background-color:#333333;
+	
+}
+

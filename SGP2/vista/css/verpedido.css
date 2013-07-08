@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+.formulario, tr:hover td{
+	background-color: transparent;
+}
+
+.cel{
+	border-bottom: 0px solid #666;
+border-right: 0px hidden;
+}
+
+.formulario{
+	font-size:12px;
+}

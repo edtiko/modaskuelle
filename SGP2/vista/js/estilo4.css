@@ -1,0 +1,35 @@
+#actualizar{
+	width: 392px;
+	height: 295px;
+	position:static;
+}
+
+#tabla{
+	position:absolute;
+	left: 12px;
+	top: 435px;
+	width: 380px;
+	height: 51px;
+	overflow:auto;
+	border: 0px;
+	color:#06F;
+}
+div.ui-datepicker{
+ font-size:10px;
+}
+#boton{
+	width: 123px;
+	height: 30px;
+	animation: cubic-bezier();
+	color:#fff;
+	background-color:#06F;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;}
+#limpiar{
+width: 85px;
+	height: 30px;
+	animation: cubic-bezier();
+	color:#fff;
+	background-color:#06F;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;}

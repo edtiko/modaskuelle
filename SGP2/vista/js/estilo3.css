@@ -1,0 +1,35 @@
+#actu{
+	width: 351px;
+	height: 244px;
+	position:absolute;
+	left: 32px;
+	top: 75px;
+}
+#letra{position:static;
+left:20px;
+}
+#ta{
+	position:absolute;
+	left: 30px;
+	top: 400px;
+	width: 358px;
+	height: 35px;
+	color:#06F;
+	
+}
+#boton{
+	width: 123px;
+	height: 30px;
+	animation: cubic-bezier();
+	color:#fff;
+	background-color:#06F;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;}
+#limpiar{
+width: 85px;
+	height: 30px;
+	animation: cubic-bezier();
+	color:#fff;
+	background-color:#06F;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;}

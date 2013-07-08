@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* CSS Document */
+body { 
+    margin: 0 auto;  
+ 
+}
+
+  input:hover, textarea:hover { 
+    background: #eee; 
+}  
+ 
+     
+      
+#ped, tr:hover td{
+	background-color: transparent;
+
+}
+
+.cel{
+	border-bottom: 0px solid #666;
+border-right: 0px hidden;
+}
+
+#ob_pedido{
+	position:absolute;
+	width:280px;
+	height:55px;
+	left: 5px;
+	top: 392px;
+}
+#estado{	
+	width:151px;	
+}
+
+#forma{
+	position:absolute;
+	width: 564px;
+	left: 25px;
+	top: 34px;      
+}
+
+#paneld{
+	position:absolute;
+	width: 600px;
+	height: 550px;
+	left: 5px;
+	top: 36px;
+	
+      /* -- CSS3 - definición de las esquinas redondeadas -- */	
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px; 
+border-radius: 10px;
+ 
+}
+#panel_detalle{
+position:absolute;	
+      /* -- CSS3 - definición de las esquinas redondeadas -- */	
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px; 
+border-radius: 10px;
+ 
+}
+ #form, tr:hover .cell{
+	background-color: transparent;
+}
+
+#detalle{
+	position:absolute;
+	width: 619px;
+	height: 165px;
+	left: 72px;
+	top: 2px;
+}
+#descrip{
+	position:absolute;
+	height: 21px;
+	width: 352px;
+	left: 208px;
+	top: 105px;
+	font-size:12px;
+}
+#observacion,#ob{
+	
+	position:absolute;
+	height: 21px;
+	width: 244px;
+	
+	
+}
+
+#medidas{
+	position:absolute;
+	top: 190px;
+	left: 71px;
+	width: 618px;
+	height: 61px;
+
+}
+
+
+#arreglo{
+	position:absolute;
+	width: 427px;
+	left: 25px;
+	top: 173px;
+	height: 64px;
+	
+}
+#guardar{
+
+    width: 165px; 
+    height: 25px;
+    color:#fff;
+    text-transform: uppercase; 
+    margin-top: 10px;
+    background-color: #18a5cc;
+    border: none;
+    position:static;
+   
+    -webkit-transition: -webkit-box-shadow 0.3s linear;
+
+ 
+/* -- CSS3 (esquinas redondeadas) -- */
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px; 
+border-radius: 4px;
+}
+#guardar:hover, #limpiar:hover { 		
+    -webkit-box-shadow: 0px 0px 20px #555;
+    -moz-box-shadow: 0px 0px 20px #aaa; 
+    box-shadow: 0px 0px 20px #555;		
+    cursor:  pointer; 
+}
+#descripcion{
+	width:200px;
+	height:70px;
+}
+#divPrenda{
+	position:absolute;
+	width:600px;
+	height:463px;
+	left: 609px;
+	top: 0px;
+	border: 2px groove;
+}
+#det{
+	left:0px;
+	padding-left:0px;
+}
+
+thead {
+ color: #15428B;
+  border: 1px solid #4297d7;
+background: url(../img/bar.png)50% 50% repeat-x;
+}
+.null{
+border-bottom: 0px solid #666;
+border-right: 0px hidden;
+		text-align: center;
+	color:#333;
+  padding: 0.4em;
+	vertical-align: 4px; 
+}
+#bodyon, th, td {
+	border-bottom: 0px solid #666;
+
+border-right: 1px solid #ccc;
+	
+	text-align: left;
+	
+  padding: 0.4em;
+	vertical-align: 2px;    
+}
+
+#tbodyon  td {
+	background-color:#FFF;
+	color:#333;
+}
+
+
+
+#div_listar{
+	position:absolute;
+}
+
+tf{
+	background: url(../img/bar.png)50% 50% repeat-x;
+	color: #15428B;
+	text-align: center;
+}
+#bg{
+ background:url(../img/bar.png)50% 50%  repeat-x;
+ color: #15428B;
+}
+
