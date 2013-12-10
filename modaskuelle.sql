@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-09-2013 a las 05:31:02
+-- Tiempo de generación: 10-12-2013 a las 04:00:56
 -- Versión del servidor: 5.5.27
 -- Versión de PHP: 5.4.7
 
@@ -35,13 +35,6 @@ CREATE TABLE IF NOT EXISTS `abonos` (
   PRIMARY KEY (`ID_ABONO`,`NRO_PEDIDO`),
   KEY `ID_ABONO` (`ID_ABONO`,`NRO_PEDIDO`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
-
---
--- Volcado de datos para la tabla `abonos`
---
-
-INSERT INTO `abonos` (`ID_ABONO`, `NRO_PEDIDO`, `ABONO`, `FECHA_ABONO`, `FORMA_PAGO`) VALUES
-(20, 1, 45000, '2013-09-29', 'Efectivo');
 
 -- --------------------------------------------------------
 
@@ -95,6 +88,9 @@ CREATE TABLE IF NOT EXISTS `blusa` (
   `entrepecho` decimal(11,2) NOT NULL,
   `escote` decimal(11,2) NOT NULL,
   `costado` decimal(11,2) NOT NULL,
+  `espalda_baja` decimal(10,0) NOT NULL,
+  `altura_busto` decimal(10,0) NOT NULL,
+  `separacion_busto` decimal(10,0) NOT NULL,
   `molde` char(5) NOT NULL,
   `observacion` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -103,8 +99,9 @@ CREATE TABLE IF NOT EXISTS `blusa` (
 -- Volcado de datos para la tabla `blusa`
 --
 
-INSERT INTO `blusa` (`id_cliente`, `talle_del`, `talle_tras`, `espalda`, `pecho`, `cintura`, `base`, `hombro`, `mangac`, `punomc`, `mangal`, `punoml`, `mangatres`, `punotres`, `entrepecho`, `escote`, `costado`, `molde`, `observacion`) VALUES
-(1145698236, 5.00, 79.00, 78.15, 5.00, 51.00, 21.00, 3.00, 20.00, 65.00, 12.78, 12.00, 210.00, 21.00, 12.00, 20.00, 201.00, 'NO', 'dfgdfgdfgdfg');
+INSERT INTO `blusa` (`id_cliente`, `talle_del`, `talle_tras`, `espalda`, `pecho`, `cintura`, `base`, `hombro`, `mangac`, `punomc`, `mangal`, `punoml`, `mangatres`, `punotres`, `entrepecho`, `escote`, `costado`, `espalda_baja`, `altura_busto`, `separacion_busto`, `molde`, `observacion`) VALUES
+(1145698236, 5.00, 79.00, 78.15, 5.00, 51.00, 21.00, 3.00, 20.00, 65.00, 12.78, 12.00, 210.00, 21.00, 12.00, 20.00, 201.00, 0, 0, 0, 'NO', 'dfgdfgdfgdfg'),
+(1148695626, 45.00, 10.00, 10.00, 63.00, 25.00, 85.00, 41.00, 52.00, 59.00, 62.00, 41.00, 45.00, 21.00, 41.00, 25.00, 45.00, 12, 85, 65, 'SI', 'KJKJGB');
 
 -- --------------------------------------------------------
 
@@ -200,24 +197,25 @@ CREATE TABLE IF NOT EXISTS `chaqueta` (
 --
 
 CREATE TABLE IF NOT EXISTS `detalle_pedido` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `NRO_PEDIDO` int(10) NOT NULL,
-  `NRO_ORDEN` int(11) NOT NULL AUTO_INCREMENT,
+  `NRO_ORDEN` int(11) NOT NULL,
   `PRENDA` varchar(20) NOT NULL,
   `DESCRIPCION` varchar(100) NOT NULL,
   `MODELO` varchar(20) NOT NULL,
   `COLOR` varchar(20) NOT NULL,
   `PRECIO` bigint(20) NOT NULL,
   `FECHA` date NOT NULL,
-  PRIMARY KEY (`NRO_PEDIDO`,`NRO_ORDEN`),
+  PRIMARY KEY (`id`),
   KEY `NRO_ORDEN` (`NRO_ORDEN`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
 
 --
 -- Volcado de datos para la tabla `detalle_pedido`
 --
 
-INSERT INTO `detalle_pedido` (`NRO_PEDIDO`, `NRO_ORDEN`, `PRENDA`, `DESCRIPCION`, `MODELO`, `COLOR`, `PRECIO`, `FECHA`) VALUES
-(1, 20, 'Arreglo', 'jhfvjhv', '', '', 78000, '2013-09-29');
+INSERT INTO `detalle_pedido` (`id`, `NRO_PEDIDO`, `NRO_ORDEN`, `PRENDA`, `DESCRIPCION`, `MODELO`, `COLOR`, `PRECIO`, `FECHA`) VALUES
+(23, 1, 1, 'Arreglo', 'lknknkl', '', '', 123456, '2013-12-08');
 
 -- --------------------------------------------------------
 
@@ -270,25 +268,46 @@ CREATE TABLE IF NOT EXISTS `fechas_entrega` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `liquidacion`
+--
+
+CREATE TABLE IF NOT EXISTS `liquidacion` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_operario` int(11) NOT NULL,
+  `incentivo` int(11) NOT NULL,
+  `ahorro` int(11) NOT NULL,
+  `vlr_neto` int(11) NOT NULL,
+  `observacion` varchar(1000) NOT NULL,
+  `fecha` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `operario`
 --
 
 CREATE TABLE IF NOT EXISTS `operario` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `CEDULA` int(11) NOT NULL,
   `NOMBRE` varchar(20) NOT NULL,
   `APELLIDO` varchar(20) NOT NULL,
   `TELEFONO` varchar(20) NOT NULL,
   `DIRECCION` varchar(20) NOT NULL,
-  `BARRIO` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `BARRIO` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `operario`
 --
 
-INSERT INTO `operario` (`CEDULA`, `NOMBRE`, `APELLIDO`, `TELEFONO`, `DIRECCION`, `BARRIO`) VALUES
-(123456, 'MARIA', 'GARCIA', '4258956', 'CRA 12 #12-8', 'LA BASE'),
-(456789, 'ERNESTO', 'CACERES', '8854712', 'cra 45 sgsdg', 'fasaf');
+INSERT INTO `operario` (`id`, `CEDULA`, `NOMBRE`, `APELLIDO`, `TELEFONO`, `DIRECCION`, `BARRIO`) VALUES
+(1, 123456, 'MARIA', 'GARCIA', '4258956', 'CRA 12 #12-8', 'LA BASE'),
+(2, 456789, 'ERNESTO', 'CACERES', '8854712', 'cra 45 sgsdg', 'LA RIVERA'),
+(3, 1213213, 'WALDEN', 'SMITH', '34534543', 'KLJHBK', 'LKNLK'),
+(4, 123, 'dsfsdf', 'lknl', '6545', 'lknl', 'lknlnlnl');
 
 -- --------------------------------------------------------
 
@@ -330,13 +349,14 @@ INSERT INTO `pantalon` (`id_cliente`, `cintura`, `base`, `largo`, `tiro`, `piern
 --
 
 CREATE TABLE IF NOT EXISTS `pedidos_asignados` (
-  `NRO_PEDIDO` int(10) NOT NULL,
-  `NRO_ORDEN` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `detalle_pedido_id` int(11) NOT NULL,
   `ID_OPERARIO` int(11) NOT NULL,
   `PAGO` bigint(20) NOT NULL,
   `FECHA_REGISTRO` date NOT NULL,
-  `FECHA_ENTREGA` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `FECHA_ENTREGA` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
